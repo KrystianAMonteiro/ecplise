@@ -1,6 +1,13 @@
 # ecplise
 Trabalhos do ecplise
 
+----------------------------------------------------------------
+Colocar estes aquivos dentro da pasta 
+C:\Users\"seu usuario"\eclipse-workspace
+abrir pelo eclipse.
+
+
+----------------------------------------------------------------
 Comandos para subir arquivos no github;
 abrir o cmd na pasta desejada e colocar os comandos em ordem;
 - rd .git /S/Q - tem que dar erro
@@ -9,6 +16,8 @@ abrir o cmd na pasta desejada e colocar os comandos em ordem;
 - git commit -m "first commit"
 - git remote add origin -link do repositorio-
 - git push -u origin master
+
+
 ----------------------------------------------------------------
 atualizar os programas no github;
 verificar se o github ta atualizado;
