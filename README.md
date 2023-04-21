@@ -3,7 +3,7 @@ Trabalhos do ecplise
 
 Comandos para subir arquivos no github;
 abrir o cmd na pasta desejada e colocar os comandos em ordem;
-- rd .git /S/Q
+- rd .git /S/Q - tem que dar erro
 - git init
 - git add .
 - git commit -m "first commit"
