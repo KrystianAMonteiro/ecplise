@@ -1,0 +1,12 @@
+package teste_aula1;
+
+public class Player {
+	public int vida = 10;
+	public String nome = "krystian";
+	
+	public void perderVida() {
+		vida--;
+	}
+	
+
+}

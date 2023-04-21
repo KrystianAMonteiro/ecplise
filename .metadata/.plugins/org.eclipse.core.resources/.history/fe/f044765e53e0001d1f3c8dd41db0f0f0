@@ -1,0 +1,40 @@
+package graficos1;
+
+import java.awt.Canvas;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Games extends Canvas implements Runnable{
+	
+	public static JFrame frame;
+	private final int WIDTH = 160;
+	private final int HEIGHT = 120;
+	private final int SCALE = 4;
+	
+	public Games() {
+		this.setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
+        initFrame();
+	}
+	
+	public void initFrame() {
+		frame = new JFrame("Jogo1");
+		frame.add(this);
+		frame.setResizable(false);
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+	public static void main(String args[]) {
+		Games game = new Games();
+	}
+			
+	public void run() {	
+		
+	}
+
+	
+	
+}

@@ -1,0 +1,21 @@
+package teste_aula1;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Player player = new Player();
+		elfo_inimigo elf = new elfo_inimigo(1000);
+		
+		elf.tomarDano();
+		System.out.println(elf.getVida());
+		
+		
+		player.perderVida();
+		player.perderVida();
+		player.perderVida();
+	    player.ganharVida();
+		
+		System.out.println(player.vida);
+	}
+
+}

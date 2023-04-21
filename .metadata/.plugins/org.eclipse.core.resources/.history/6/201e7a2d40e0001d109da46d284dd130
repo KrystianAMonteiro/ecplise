@@ -1,0 +1,62 @@
+package teste_aula1;
+
+public class Game {
+	public static void main(String[] args) {
+		//variaveis;
+		
+		//String = Textos---
+		String nome = "Krystian";
+		//int = numeros inteiros---
+		int idade = 20;
+		int contador = 0;
+		//double = numeros com virgulas---
+		double peso = 112.4;
+		//Boolean = verdadeiro ou falso---
+		boolean tipo = true;
+		//Depois de definir as variaveis, podemos mudar apenas chamando o nome---
+		/*
+		nome = "monteiro";
+		idade = 25;
+		peso = 110.3;
+		tipo = false;
+		*/			
+		System.out.println("hello world, meu nome e " + nome);
+		System.out.println("tenho " + idade + " anos de idade.");
+		System.out.println("tenho " + peso + " de peso");
+
+//------------------------------------------------------------------------------------------------	
+		//Condicoes numericos
+		// == igual a ..
+		// <  menor que ..		
+		// >  maior que ..
+		// <= menor ou igual a ...
+		// >= maior ou igual a ...
+		// Condicoes com letras
+		// <variavel string>.equals ...
+		
+		if(idade == 25) {
+			System.out.println("a idade e 25");			
+		}else {
+			System.out.println("a idade correta e 25");
+		}
+//------------------------------------------------------------------------------------------------
+		
+		if(nome.equals("Krystian")) {
+			System.out.println("meu Nome verdadeiro");			
+		}else {
+			System.out.println("meu nome e krystian");
+		}
+//------------------------------------------------------------------------------------------------
+		//lacos de repeticao
+		//while = enquanto 
+		// ++ = mais 1
+		
+		while(contador <= 10) {
+			System.out.println("meu numero atual e " + contador);
+			contador ++;
+		};
+		
+		
+	}
+
+}

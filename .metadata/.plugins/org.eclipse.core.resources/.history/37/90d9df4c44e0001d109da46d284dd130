@@ -1,0 +1,30 @@
+package teste_aula1;
+
+import java.util.ArrayList;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Player player = new Player();
+		elfo_inimigo elf = new elfo_inimigo(10000);
+		elf.tomarDano();
+		System.out.println(elf.getVida());
+//------------------------------------------------------------------------------------------------	
+		ArrayList<Inimigo> inimigos = new ArrayList<Inimigo>();
+		inimigos.add(new elfo_inimigo(100));
+		inimigos.add(new elfo_inimigo(60));
+		inimigos.add(new Inimigo(1000));
+		
+		inimigos.get(0).tomarDano();
+		System.out.println(inimigos.get(0).vida);
+		
+		
+		player.perderVida();
+		player.perderVida();
+		player.perderVida();
+	    player.ganharVida();
+		
+		System.out.println(player.vida);
+	}
+
+}

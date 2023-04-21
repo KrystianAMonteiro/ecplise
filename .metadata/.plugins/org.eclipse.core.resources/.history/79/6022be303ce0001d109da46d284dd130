@@ -1,0 +1,13 @@
+package teste_aula1;
+
+public class Game {
+	public static void main(String[] args) {
+		String nome = "Krystian";
+		int idade = 25;
+		boolean tipo = true;
+		
+		
+		System.out.println("hello world meu nome e " + nome + " tenho idade de " + idade);
+	}
+
+}

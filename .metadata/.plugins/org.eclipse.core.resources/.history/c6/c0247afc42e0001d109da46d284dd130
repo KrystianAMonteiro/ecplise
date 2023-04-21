@@ -1,0 +1,20 @@
+package teste_aula1;
+
+
+//atributos--
+//public = variavel publica para utilizar em outras class
+//private = varial fica privado apenas pra essa class, nao podendo puxar para outro.
+
+public class Player {
+	public int vida = 10;
+	public String nome = "krystian";
+	
+	public void perderVida() {
+		vida--;
+	}
+	public void ganharVida() {
+		vida++;
+	}
+	
+
+}
