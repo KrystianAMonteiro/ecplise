@@ -11,30 +11,29 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-public class Games extends Canvas implements Runnable{
+
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JFrame;
+
+public class Game extends Canvas implements Runnable{
 	
 	public static JFrame frame;
 	private Thread thread;
 	private boolean isRunning = true;
 	private final int WIDTH = 240;
 	private final int HEIGHT = 160;
-	private final int SCALE = 4;
-	
+	private final int SCALE = 4;	
 	private BufferedImage image;
-	private Spritesheet sheet;
-	private BufferedImage[] player;
-	private int frames = 0;
-	private int maxFrames = 20;
-	private int curAnimation = 0, maxAnimation = 4;
-			
+
 	
-	public Games() {
-		sheet = new Spritesheet("/spritesheet.png");
-		player = new BufferedImage[4];
-		player[0] = sheet.getSprite(0, 0, 16, 16);
-		player[1] = sheet.getSprite(16, 0, 16, 16);
-		player[2] = sheet.getSprite(32, 0, 16, 16);
-		player[3] = sheet.getSprite(48, 0, 16, 16);
+	public Game() {
 		this.setPreferredSize(new Dimension(WIDTH*SCALE, HEIGHT*SCALE));
         initFrame();
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
@@ -66,21 +65,14 @@ public class Games extends Canvas implements Runnable{
 	}
 
 	public static void main(String args[]) {
-		Games game = new Games();
+		Game game = new Game();
 		game.start();
 	}
 	
 	public void tick() {
-		frames++;
-		if(frames > maxFrames) {
-			frames = 0;
-			curAnimation++;
-			if(curAnimation >= maxAnimation) {
-				curAnimation = 0;
-			}
+			
 		}
 		
-	}
 	
 	public void render() {
 		BufferStrategy bs = this.getBufferStrategy();
@@ -96,11 +88,6 @@ public class Games extends Canvas implements Runnable{
      // g.drawString("ola mundo", 16, 20);
  /*----------------------------------Render do jogo----------------------------------*/ 
         Graphics2D g2 = (Graphics2D) g;
-        //rotacao do personagem
-        //g2.rotate(Math.toRadians(95), 20+8, 20+8);
-        g2.drawImage(player[curAnimation],20,20,null);
-                
-        /***/
         g.dispose();
         g = bs.getDrawGraphics();
         g.drawImage(image, 0, 0, WIDTH*SCALE, HEIGHT*SCALE, null);
@@ -133,7 +120,5 @@ public class Games extends Canvas implements Runnable{
 		
 		stop();
 	}
-
-	
 	
 }
